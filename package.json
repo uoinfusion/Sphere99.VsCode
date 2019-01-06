@@ -1,0 +1,31 @@
+{
+    "name": "sphere99",
+    "displayName": "Sphere99",
+    "description": "Visual Studio Code extension for SphereServer 0.99 scripts",
+    "version": "0.0.1",
+    "publisher": "uoinfusion",
+    "qna": "marketplace",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "repository": {
+        "url": "https://github.com/uoinfusion/Sphere99.VsCode"
+    },
+    "license": "MIT License",
+    "contributes": {
+        "languages": [{
+            "id": "scp99",
+            "aliases": ["SphereScript99", "scp99"],
+            "extensions": ["scp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "scp99",
+            "scopeName": "source.sphere99",
+            "path": "./syntaxes/scp99.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,95 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SphereScript99",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#headers"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#keywords"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": 
+			[
+				{
+					"name": "keyword.control.scp99",
+					"match": "\\b(?i:dorand|doswitch|else|elsif|elseif|endif|enddo|endwhile|if|while|return)\\b"
+				},
+				{
+					"name": "entity.name.type.scp99",
+					"match": "\\b(?i:act|arg|argChk|argn|args|argo|argv|argvcount|argtxt|lastnew|lastnewchar|link|qtag|serv|serv|src|tag|targ|this|topobj|Trigger|var)\\b"
+				},
+				{
+					"name": "variable.name.scp99",
+					"match": "\\b(?i:action|AddTimer|advrate|amount|anim|armor|attr|aversions|baseid|bloodcolor|body|can|can_pile|char|color|cont|dam|def|defname|desires|dex|dispid|fame|findlayer|findMemory|findType|flags|flip|food|foodtype|HasTimer|hits|hitpoints|icon|id|int|intelligence|item|karma|key|layer|maxFood|obody|oskin|mana|maxhits|maxmana|maxstam|memoryfindtype|more|more1|more2|morep|morex|morey|morez|moverate|name|npc|p|RemoveTimer|resources|resources2|resmake|serial|shelter|skillmake|skillsum|stam|stamina|statsum|str|strength|strlen|strmatch|tdata1|tdata2|tdata3|tdata4|tevents|timer|timerd|title|tspeech|type|uid|value|weight)\\b"
+				},
+				{
+					"name": "entity.name.function.scp99",
+					"match": "\\b(?i:sex|AddTriggerGroup|isevent|allskills|attack|bounce|CanSeeLos|charExists|checkBox|CheckSuccess|classmessage|consume|create|damage|DelaySkillStroke|findId|dialog|dismount|distanceFrom|dupe|emote|effect|equip|eval|events|findres|finduid|fix|font|gm|go|invul|isChar|isChardef|isDead|isGM|isItem|isItemdef|itemExists|itemNewbie|makeitem|message|mount|newequip|newequipsafe|newitem|newitemsafe|newnpc|npcExists|nuke|playerExists|profession|rand|redmessage|reduceResist|resurrect|return|remove|RemoveTriggerGroup|rescount|restest|safe|say|sayU|sayUA|settext|skill|speak|speakU|sound|skillCheck|spellEffect|srcCanSeeLOS|stopMagery|strcmpi|suicide|sysMessage|target|Trigger_Fail|Trigger_Start|Trigger_Success|update|unequip|use|GUMPS|button|checkertrans|lastTextLine|dialogclose|dialog_buttonpos|dialog_buttonpos_near|dialog_forcePage|dialog_linkButton|dialog_newPage|dialog_page|dialog_textpos|gumppic|htmlgump|newHTMLGump|lastTextLine|newTextLine|noclose|nomove|questDialog_addResponse|questDialog_baseButt|questDialog_create|questDialog_HTMLGUMP|page|resizepic|setLocation|text|texta|textentry|newTextEntry)\\b"
+				},
+				{
+					"name": "entity.name.class.scp99",
+					"match": "\\@(?i:select|start|stroke|successNPCRestock|UserContextMenu|Create|Death|DeathCorpse|Destroy|GetHit|HitMiss|HitTry|Hit|itemDAMAGE|itemDestroy|itemDROPON_CHAR|itemDROPON_GROUND|DROPON_GROUND|itemdropon_obj|equip|unequip|itemEQUIP|itemPICKUP_GROUND|itemPICKUP_PACK|itemPICKUP_CHAR|itemSPELLEffect|step|itemSTEP|itemSTACKON|itemTARGON_CHAR|itemTARGON_GROUND|itemTARGON_ITEM|itemTimer|itemUNEQUIP|itemUserClick|itemUserDClick|itemUserToolTip|LogIn|LogOut|NPCAcceptItem|NPCHearGreeting|NPCHearNeed|NPCHearUnknown|NPCRefuseItem|NPCSeeNewPlayer|NPCSeeWantItem|PersonalSpace|ReceiveItem|SkillAbort|SkillFail|SkillMakeItem|SkillSelect|SkillStart|SkillStroke|SkillSuccess|SpellCast|SpellEffect|targon_char|targon_item|targon_ground|timer|UserButton|UserClick|UserDClick|UserToolTip|afterswing|finalBlow|aftergetswing|beforedoeffect|afterDoEffect|beforegeteffect|beforegetswing|Created|DrinkingPotion|aftergetswing|playerKill|npckill|anybutton)"
+				},
+				{
+					"name": "meta.preprocessor.scp99",
+					"match": "(?i:on)="
+				},
+				{
+					"name": "keyword.operator.new.scp99",
+					"match": "\\+|\\-|\\*|\\/|=|!=|<|>|\\&|\\||%|\\^"
+				},
+				{
+					"name": "constant.numeric.scp99",
+					"match": "\\b(#?|[0-9])([0-9]|[a-f]|[A-F])+\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.scp99",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.numeric.scp99",
+					"match": "<|>|\\(|\\)"
+				},
+				{
+					"name": "constant.character.scp99",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"begin": "//",
+			"end": "$",
+			"name": "comment.line.scp9",
+			"patterns":
+			[
+				{
+					"name": "comment.line.double-slash.scp99",
+					"match": "\\\\."
+				}
+			]
+		},
+		"headers": {
+			"begin": "^\\[",
+			"end": "(\\]|$)",
+			"patterns": [
+				{
+					"name": "meta.preprocessor.scp99",
+					"match": "\\b(?i:function|chardef|itemdef|events|defnames|dialog|typedef|speech|template|menu|eof)\\b"
+				}	
+			]
+		}
+	},
+	"scopeName": "source.sphere99"
+}
