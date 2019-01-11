@@ -6,6 +6,10 @@ This is a a syntax highlighting extension for Visual Studio Code that makes scri
 
 ## Release Notes
 
+### 0.0.2
+
+Many known name fixes. Parenthesis are not auto-closed.
+
 ### 0.0.1
 
 Initial release of Sphere99.VsCode.

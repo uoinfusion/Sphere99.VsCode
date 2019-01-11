@@ -2,7 +2,7 @@
     "name": "sphere99",
     "displayName": "Sphere99",
     "description": "Visual Studio Code extension for SphereServer 0.99 scripts",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "uoinfusion",
     "qna": "marketplace",
     "engines": {
